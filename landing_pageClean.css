@@ -479,6 +479,7 @@ header {
     margin-bottom: 0.4rem;
     display: flex;
     gap: 0.45rem;
+    justify-content: center; 
 }
 
 .benefits-list span.icon,
@@ -583,6 +584,13 @@ textarea {
     flex-direction: column;
     align-items: center;
     gap: 0.7rem;
+}
+
+.naruto{
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-position: 50% 100%;
+background-image: url(img/naruto.gif);
 }
 
 .footer-logo {
