@@ -590,7 +590,7 @@ textarea {
 background-repeat: no-repeat;
 background-attachment: scroll;
 background-position: 50% 100%;
-background-image: url(img/naruto.gif);
+background-image: url("img/naruto.gif");
 }
 
 .footer-logo {
