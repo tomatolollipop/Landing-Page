@@ -167,42 +167,58 @@ header {
 
 /* Hero */
 
+/* hero logo */
+/* .hero-illustration {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 20%, #f0fff4 0%, #9ae6b4 40%, #38b2ac 90%);
+    box-shadow: 0 18px 40px rgba(56, 161, 105, 0.35);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-illustration::before {
+    content: "🏡";
+    font-size: 3rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+} */
+/* end of hero logo */
+
+/* .hero {
+    padding: 2.5rem 0 3rem;
+    background: radial-gradient(circle at top, #f0fff4 0%, #c6f6d5 40%, #f7fafc 100%);
+} */
 
 .hero {
     padding: 2.5rem 0 3rem;
-    background-image: url("img/harvest.png");
+    background-image: url("images/harvest.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; 
-    /* color: #fff;  */
+    background-attachment: fixed; /* optional parallax effect */
+    color: #fff; /* ensures text is readable */
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.45);
-    z-index: 1;
-}
-
-.hero * {
-    position: relative;
-    z-index: 2;
-    color: white;
-}
-
-.hero-grid {
+/* .hero-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.6rem;
     align-items: center;
     justify-items: center;
     text-align: center;
+} */
+.hero-grid {
+    display: flex;
+    justify-content: center;   /* center the content horizontally */
+    align-items: center;
+    text-align: center;        /* center headings/paragraphs by default */
 }
+
+
 
 .hero-badge {
     display: inline-flex;
@@ -210,8 +226,8 @@ header {
     gap: 0.4rem;
     padding: 0.35rem 0.75rem;
     border-radius: 999px;
-    background: rgba(72, 187, 120, 0.12);
-    color: var(--green-main);
+    background: var(--green-soft);
+    color: var(--text);
     font-size: 0.75rem;
     margin-bottom: 0.9rem;
 }
@@ -219,12 +235,12 @@ header {
 .hero-title {
     font-size: clamp(2rem, 3vw, 2.7rem);
     font-weight: 700;
-    color: var(--dark);
+    color: var(--green-soft);
     margin-bottom: 0.6rem;
 }
 
 .hero-subtitle {
-    color: #4a5568;
+    color: var(--green-soft);
     font-size: 0.98rem;
     margin-bottom: 0.9rem;   /* was 1.2rem */
     max-width: 470px;
@@ -232,12 +248,28 @@ header {
     margin-right: auto;
 }
 
+/* newly added */
+.hero-left {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* newly added */
 
-
-.hero-list {
+/* .hero-list {
     list-style: none;
     margin-bottom: 1.5rem;
+} */
+
+
+/* .hero-list {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
 }
+
 
 .hero-list li {
     display: flex;
@@ -250,14 +282,23 @@ header {
 .hero-list span.check {
     color: var(--green-main);
     font-weight: 700;
-}
+} */
 
-.hero-cta-row {
+/* .hero-cta-row {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     align-items: center;
+} */
+
+.hero-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;   /* centers the buttons */
+    align-items: center;
 }
+
 
 .btn-primary {
     padding: 0.8rem 1.6rem;
@@ -293,10 +334,10 @@ header {
     border-color: var(--green-main);
 }
 
-.hero-caption {
+/* .hero-caption {
     font-size: 0.8rem;
     color: #718096;
-}
+} */
 
 /* About */
 .about-content {
@@ -377,15 +418,22 @@ header {
     margin-bottom: 0.25rem;
 }
 
-.steps {
+/* .steps {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
     margin-top: 1rem;
-}
-
-.step {
     text-align: left;
+    font-size: 0.85rem;
+} */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+    text-align: center;
     font-size: 0.85rem;
 }
 
@@ -403,11 +451,21 @@ header {
     margin-bottom: 0.5rem;
 }
 
-/* Benefits & Who it's for */
-.benefits-grid {
+/* Benefits*/
+
+/* .benefits-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
+} */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
 }
 
 .benefits-list,
