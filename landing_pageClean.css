@@ -589,7 +589,7 @@ textarea {
 .naruto{
 background-repeat: no-repeat;
 background-attachment: scroll;
-background-position: 50% 100%;
+background-position: 50% 50%;
 background-image: url("img/naruto.gif");
 }
 
