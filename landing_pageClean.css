@@ -609,15 +609,19 @@ background-image: url("img/naruto.gif");
     /* .benefits-grid, */
     /* .signup-inner  */
     {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax (0,1fr);
     }
-
-    @media (max-width: 992px) {
+    
     .signup-inner,
     .benefits-grid {
-        grid-template-columns: 1fr;
-        
+        grid-template-columns: 1fr;    
     }
+
+    .ready {
+        text-align: center;
+        margin: auto;
+    }
+
 
     .hero-grid {
         gap: 2rem;
