@@ -606,9 +606,17 @@ background-image: url("img/naruto.gif");
     .hero-grid,
     .about-content,
     .cards-grid,
-    .benefits-grid,
-    .signup-inner {
+    /* .benefits-grid, */
+    /* .signup-inner  */
+    {
         grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 992px) {
+    .signup-inner,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        
     }
 
     .hero-grid {
