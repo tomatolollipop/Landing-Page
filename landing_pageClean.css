@@ -14,13 +14,6 @@
     --white: #ffffff;
 }
 
-/* body {
-    font-family: "Poppins", sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-} */
-
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--bg);
@@ -57,14 +50,14 @@ img {
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--text);
 }
 
 .section-subtitle {
     text-align: center;
     max-width: 650px;
     margin: 0.5rem auto 2.5rem;
-    color: #ffffff;
+    color: var(--dark);
     font-size: 0.95rem;
 }
 
@@ -229,50 +222,13 @@ header {
     text-align: center;
 }
 /* newly added */
-
-/* .hero-list {
-    list-style: none;
-    margin-bottom: 1.5rem;
-} */
-
-
-/* .hero-list {
-    list-style: none;
-    margin: 0 0 1rem;
-    padding: 0;
-    display: inline-block;
-    text-align: left;
-}
-
-
-.hero-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-bottom: 0.35rem;
-    font-size: 0.9rem;
-}
-
-.hero-list span.check {
-    color: var(--green-main);
-    font-weight: 700;
-} */
-
-/* .hero-cta-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-} */
-
 .hero-cta-row {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
-    justify-content: center;   /* centers the buttons */
+    justify-content: center;
     align-items: center;
 }
-
 
 .btn-primary {
     padding: 0.8rem 1.6rem;
@@ -308,10 +264,6 @@ header {
     border-color: var(--green-main);
 }
 
-/* .hero-caption {
-    font-size: 0.8rem;
-    color: #718096;
-} */
 
 /* About */
 .about-content {
@@ -368,7 +320,6 @@ header {
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.04);
     border: 1px solid #e2e8f0;
     font-size: 0.9rem;
-    /* justify-content: center; */
 }
 
 .card-label {
@@ -455,9 +406,15 @@ header {
     justify-content: center;
 }
 
+.section.background-img .section-title,
+.section.background-img .section-subtitle {
+    color: #fff;
+}
+
+
 .benefits-list span.icon,
 .who-list span.icon {
-    color: var(--green-main);
+    color: #99fd8e ;
 }
 
 /* Signup */
@@ -589,8 +546,6 @@ background-image: url(img/naruto.gif);
     .hero-grid {
         gap: 2rem;
     }
-
-
 
     .section {
         padding: 3rem 0;
