@@ -7,7 +7,7 @@
 :root {
     --green-main: #2f855a;
     --green-light: #48bb78;
-    --green-soft: #e6fffa;
+    --green-soft: #d4f7f0;
     --dark: #1a202c;
     --text: #2d3748;
     --bg: #f7fafc;
@@ -57,14 +57,14 @@ img {
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--dark);
+    color: var(--white);
 }
 
 .section-subtitle {
     text-align: center;
     max-width: 650px;
     margin: 0.5rem auto 2.5rem;
-    color: #4a5568;
+    color: #ffffff;
     font-size: 0.95rem;
 }
 
@@ -167,58 +167,32 @@ header {
 
 /* Hero */
 
-/* hero logo */
-/* .hero-illustration {
-    width: 160px;
-    height: 160px;
-    margin: 0 auto 1rem;
-    border-radius: 50%;
-    background: radial-gradient(circle at 30% 20%, #f0fff4 0%, #9ae6b4 40%, #38b2ac 90%);
-    box-shadow: 0 18px 40px rgba(56, 161, 105, 0.35);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-illustration::before {
-    content: "🏡";
-    font-size: 3rem;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
-} */
-/* end of hero logo */
-
-/* .hero {
-    padding: 2.5rem 0 3rem;
-    background: radial-gradient(circle at top, #f0fff4 0%, #c6f6d5 40%, #f7fafc 100%);
-} */
-
 .hero {
+    position: relative;
     padding: 2.5rem 0 3rem;
-    background-image: url("img/harvest.png");
+    color: #fff;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("img/lettuce.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed; /* optional parallax effect */
-    color: #fff; /* ensures text is readable */
 }
 
-/* .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.6rem;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-} */
+.hero > * {
+    filter: none !important;
+    color: #fff;
+}
+
+
 .hero-grid {
     display: flex;
-    justify-content: center;   /* center the content horizontally */
+    justify-content: center;
     align-items: center;
-    text-align: center;        /* center headings/paragraphs by default */
+    text-align: center;
 }
-
-
 
 .hero-badge {
     display: inline-flex;
@@ -235,12 +209,12 @@ header {
 .hero-title {
     font-size: clamp(2rem, 3vw, 2.7rem);
     font-weight: 700;
-    color: var(--green-soft);
+    color: var(--white);
     margin-bottom: 0.6rem;
 }
 
 .hero-subtitle {
-    color: var(--green-soft);
+    color: var(--white);
     font-size: 0.98rem;
     margin-bottom: 0.9rem;   /* was 1.2rem */
     max-width: 470px;
@@ -353,6 +327,7 @@ header {
     flex-direction: column;
     gap: 0.75rem;
     margin-top: 0.75rem;
+    justify-content: center;
 }
 
 .pill-item {
@@ -393,6 +368,7 @@ header {
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.04);
     border: 1px solid #e2e8f0;
     font-size: 0.9rem;
+    /* justify-content: center; */
 }
 
 .card-label {
@@ -417,15 +393,6 @@ header {
 .card ul li {
     margin-bottom: 0.25rem;
 }
-
-/* .steps {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-    text-align: left;
-    font-size: 0.85rem;
-} */
 
 .steps {
     display: grid;
@@ -453,11 +420,16 @@ header {
 
 /* Benefits*/
 
-/* .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
-} */
+.section.background-img {
+    position: relative;
+    color: #fff;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("img/farmer.jpg");  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .benefits-grid {
     display: grid;
@@ -472,6 +444,7 @@ header {
 .who-list {
     list-style: none;
     font-size: 0.9rem;
+    
 }
 
 .benefits-list li,
@@ -479,7 +452,7 @@ header {
     margin-bottom: 0.4rem;
     display: flex;
     gap: 0.45rem;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .benefits-list span.icon,
@@ -563,15 +536,6 @@ textarea {
     transform: translateY(-1px);
 }
 
-/* Footer */
-/* footer {
-    padding: 1.5rem 0;
-    font-size: 0.8rem;
-    color: #a0aec0;
-    text-align: center;
-} */
-
-/* addded for tomatolollipop logo */
 .footer {
     padding: 1.8rem 0;
     background: #ffffff;
@@ -580,6 +544,7 @@ textarea {
 }
 
 .footer-content {
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -589,8 +554,9 @@ textarea {
 .naruto{
 background-repeat: no-repeat;
 background-attachment: scroll;
-background-position: 50% 50%;
-background-image: url("img/naruto.gif");
+background-position: 50% 100%;
+background-image: url(img/naruto.gif);
+
 }
 
 .footer-logo {
@@ -602,30 +568,29 @@ background-image: url("img/naruto.gif");
 
 
 /* Responsive */
+
 @media (max-width: 992px) {
     .hero-grid,
     .about-content,
-    .cards-grid
-    /* .benefits-grid, */
-    /* .signup-inner  */
-    {
-        grid-template-columns: minmax (0,1fr);
+    .cards-grid {
+        grid-template-columns:minmax (0,1fr);
     }
-    
+
     .signup-inner,
     .benefits-grid {
-        grid-template-columns: 1fr;    
-    }
+        grid-template-columns: 1fr;
+        }
 
     .ready {
         text-align: center;
         margin: auto;
     }
 
-
     .hero-grid {
         gap: 2rem;
     }
+
+
 
     .section {
         padding: 3rem 0;
@@ -679,7 +644,7 @@ background-image: url("img/naruto.gif");
         text-align: center;
     }
 
-    /* hamburger animation */
+    /* nav hamburger animation */
     .navbar.nav-open .nav-toggle span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
     }
