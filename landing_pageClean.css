@@ -574,7 +574,7 @@ textarea {
 /* addded for tomatolollipop logo */
 .footer {
     padding: 1.8rem 0;
-    background: #f0fff4;
+    background: #ffffff;
     border-top: 1px solid #c6f6d5;
     text-align: center;
 }
@@ -605,7 +605,7 @@ background-image: url("img/naruto.gif");
 @media (max-width: 992px) {
     .hero-grid,
     .about-content,
-    .cards-grid,
+    .cards-grid
     /* .benefits-grid, */
     /* .signup-inner  */
     {
